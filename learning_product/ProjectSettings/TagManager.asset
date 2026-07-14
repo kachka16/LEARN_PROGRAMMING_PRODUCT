@@ -2,8 +2,13 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Theme1
+  - Theme2
+  - themeText1
+  - themeText2
+  - TopDetector
   layers:
   - Default
   - TransparentFX
@@ -11,13 +16,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - bg
+  - gear
+  - level_unlock
+  - level_lock
+  - robot
+  - panel
+  - icon
   - 
   - 
   - 
@@ -41,3 +46,26 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: bg
+    uniqueID: 1539097713
+    locked: 0
+  - name: gear
+    uniqueID: 3163293253
+    locked: 0
+  - name: level_unlock
+    uniqueID: 773575111
+    locked: 0
+  - name: level_lock
+    uniqueID: 1508368743
+    locked: 0
+  - name: panel
+    uniqueID: 2871017897
+    locked: 0
+  - name: icon
+    uniqueID: 1109139189
+    locked: 0
+  - name: text_icon
+    uniqueID: 568156803
+    locked: 0
+  m_RenderingLayers:
+  - Default

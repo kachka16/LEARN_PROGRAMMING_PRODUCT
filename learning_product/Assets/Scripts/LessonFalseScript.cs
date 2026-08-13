@@ -4,9 +4,13 @@ public class LessonFalseScript : MonoBehaviour
 {
     public GameObject locks;
     public Animator circleAnimator;
-    public void Kfkeef()
+
+    public void lockFalse()
     {
-        locks.SetActive(false);
+        if (locks != null)
+        {
+            locks.SetActive(false);
+        }
     }
     public void PlayCircle()
     {

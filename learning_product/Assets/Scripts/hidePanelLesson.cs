@@ -3,10 +3,7 @@ using UnityEngine;
 public class hidePanelLesson : MonoBehaviour
 {
     public GameObject[] gameObjectsL;
-    private void Start()
-    {
-        ShowMenu(gameObjectsL[0]);
-    }
+    public Animator resultAnimator;
     void HideAll()
     {
         for (int i = 0; i < gameObjectsL.Length; i++)
@@ -25,6 +22,12 @@ public class hidePanelLesson : MonoBehaviour
     }
     public void ResultMenu()
     {
+
         ShowMenu(gameObjectsL[1]);
+        resultAnimator.Play("resultMenu1");
+    }
+    public void TestMenu()
+    {
+        ShowMenu(gameObjectsL[2]);
     }
 }

@@ -5,6 +5,10 @@ public class LessonFalseScript : MonoBehaviour
     public GameObject locks;
     public Animator circleAnimator;
 
+    void Start()
+    {
+        locks.SetActive(true);
+    }
     public void lockFalse()
     {
         if (locks != null)

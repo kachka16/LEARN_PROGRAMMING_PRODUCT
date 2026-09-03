@@ -7,9 +7,13 @@ public class LoadingScript : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] Slider loadingSlider;
-    [SerializeField] float loadSpeed = 0.6f;
+    [SerializeField] float loadSpeed = 0.5f;
     [SerializeField] string menuSceneName = "MenuScene";
-    void Start()
+    [SerializeField] private Animator transitionAnimator;
+    [SerializeField] private string endTriggerName = "end";
+    [SerializeField] private float transitionDuration = 1f;
+    [SerializeField] public float waitAfterLoad = 5f;
+    private void Start()
     {
         Application.targetFrameRate = 60;
         loadingSlider.value = 0f;
@@ -23,7 +27,16 @@ public class LoadingScript : MonoBehaviour
             yield return null;
         }
 
+
         loadingSlider.value = 1f;
+        yield return new WaitForSeconds(waitAfterLoad);
+
+        if (transitionAnimator != null)
+        {
+            transitionAnimator.SetTrigger(endTriggerName);
+        }
+
+        yield return new WaitForSeconds(transitionDuration);
         SceneManager.LoadScene(menuSceneName);
     }
 }

@@ -20,6 +20,7 @@ public class AnimLevelLoading : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MenuScene")
         {
+            circleAnimator.ResetTrigger("end");
             circleAnimator.SetTrigger("start");
         }
     }
